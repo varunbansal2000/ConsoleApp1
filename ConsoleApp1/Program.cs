@@ -6,10 +6,54 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+
+    public abstract class animal
+    {
+        public void sound()
+        {
+            Console.WriteLine("Hi animal");
+        }
+        public abstract void  mbo();
+        
+    }
+
+    public abstract class dog : animal
+    {
+        public void sound()
+        {
+            Console.WriteLine("Hi dog");
+        }
+        public override void mbo()
+        {
+
+        }
+        public abstract void m();
+    }
+
+    public class M3 : dog
+    {
+        public override void m()
+        {
+            throw new NotImplementedException();
+        }
+
+      
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
+            //animal a = new animal();
+            //a.sound();
+            //dog d = new dog();
+            //d.sound();
+            //animal b = new dog();
+            ////b.sound2();
+            //b.sound();
+            //Console.ReadLine();
+            //return;
+
+
             int [] cv;
            
             Console.WriteLine("Hello !!!");
