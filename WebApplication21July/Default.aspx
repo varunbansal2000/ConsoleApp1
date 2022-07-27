@@ -24,7 +24,7 @@
         </div>
          <div class="form-group">
             <asp:Label runat="server">Salary</asp:Label>
-             <asp:CheckBox ID="CheckBox1" runat="server" />
+            
             <asp:TextBox runat="server" ID="txtsal" TextMode="Number" CssClass="form-control"></asp:TextBox> 
         </div>
         <div class="form-group">

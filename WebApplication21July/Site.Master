@@ -53,7 +53,11 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/july22">July22</a></li>
+                        <li><a runat="server" href="~/Assignments/july22">July22</a></li>
+                        <li><a runat="server" href="~/Assignments/Department25July">July25 Dept</a></li>
+                        <li><a runat="server" href="~/Assignments/Employee25July">July25 Emp</a></li>
+                        <li><a runat="server" href="~/Assignments/Search25July">July25 Search</a></li>
+                        <li><a runat="server" href="~/Assignments_User_Controls/CurrencyConverterContainer">CurrConv</a></li>
                     </ul>
                 </div>
             </div>

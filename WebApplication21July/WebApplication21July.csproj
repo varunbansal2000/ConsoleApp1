@@ -106,6 +106,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Assignments\Department25July.aspx" />
+    <Content Include="Assignments\Employee25July.aspx" />
+    <Content Include="Assignments\Search25July.aspx" />
+    <Content Include="Assignments_User_Controls\CurrencyConverter.ascx" />
+    <Content Include="Assignments_User_Controls\CurrencyConverterContainer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -125,7 +130,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="july22.aspx" />
+    <Content Include="Assignments\july22.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -170,6 +175,41 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Assignments\Department25July.aspx.cs">
+      <DependentUpon>Department25July.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Department25July.aspx.designer.cs">
+      <DependentUpon>Department25July.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Employee25July.aspx.cs">
+      <DependentUpon>Employee25July.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Employee25July.aspx.designer.cs">
+      <DependentUpon>Employee25July.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Search25July.aspx.cs">
+      <DependentUpon>Search25July.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Search25July.aspx.designer.cs">
+      <DependentUpon>Search25July.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments_User_Controls\CurrencyConverter.ascx.cs">
+      <DependentUpon>CurrencyConverter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments_User_Controls\CurrencyConverter.ascx.designer.cs">
+      <DependentUpon>CurrencyConverter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments_User_Controls\CurrencyConverterContainer.aspx.cs">
+      <DependentUpon>CurrencyConverterContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments_User_Controls\CurrencyConverterContainer.aspx.designer.cs">
+      <DependentUpon>CurrencyConverterContainer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,11 +227,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="july22.aspx.cs">
+    <Compile Include="Assignments\july22.aspx.cs">
       <DependentUpon>july22.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="july22.aspx.designer.cs">
+    <Compile Include="Assignments\july22.aspx.designer.cs">
       <DependentUpon>july22.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\city.cs" />
@@ -234,6 +274,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.DataAccess\Application.DataAccess.csproj">
+      <Project>{3517e881-c6a1-425b-b81e-15775a2ccd78}</Project>
+      <Name>Application.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Entities\Application.Entities.csproj">
+      <Project>{557777cf-629b-43f3-a702-d14db8564ca4}</Project>
+      <Name>Application.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
