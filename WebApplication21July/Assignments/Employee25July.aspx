@@ -31,7 +31,7 @@
             <asp:Label ID="Label5" runat="server" Text="Salary"></asp:Label>
             <asp:TextBox CssClass="form-control" ID="TextSalary" runat="server" TextMode="Number" ></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ErrorMessage="Field Required!!" ControlToValidate="TextSalary" runat="server"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="value should be greater than 0!!" ControlToValidate="TextSalary" MinimumValue="1" MaximumValue="1000000" Type="Integer"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="value should be greater than 0!!" ControlToValidate="TextSalary" MinimumValue="1" MaximumValue="100000000" Type="Integer"></asp:RangeValidator>
         </div>
 
         <div class="form-group">

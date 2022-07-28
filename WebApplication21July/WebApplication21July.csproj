@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Assignments\CustomControl26July.aspx" />
     <Content Include="Assignments\Department25July.aspx" />
     <Content Include="Assignments\Employee25July.aspx" />
     <Content Include="Assignments\Search25July.aspx" />
@@ -175,6 +176,14 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Assignment26July.cs" />
+    <Compile Include="Assignments\CustomControl26July.aspx.cs">
+      <DependentUpon>CustomControl26July.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\CustomControl26July.aspx.designer.cs">
+      <DependentUpon>CustomControl26July.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Assignments\Department25July.aspx.cs">
       <DependentUpon>Department25July.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

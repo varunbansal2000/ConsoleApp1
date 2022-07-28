@@ -73,8 +73,18 @@ namespace WebApplication21July.Assignments
                 employee.Designation = TextDesignation.Text;
                 employee.Salary = Convert.ToInt32(TextSalary.Text);
 
-                employeeDataAcecss.Craete(employee);
-                Loader();
+                Employee emp = employeeDataAcecss.Get(employee.EmpNo);
+                if (emp != null)
+                {
+                    employeeDataAcecss.Update(employee.EmpNo, employee);
+                    lblstatus.Text = "Update Successfully!!";
+                }
+                else
+                {
+                    employeeDataAcecss.Craete(employee);
+                    lblstatus.Text = "Added Successfully!!";
+                }
+                    Loader();
 
                 TextEmpName.Text = String.Empty;
                 TextBoxEmpNo.Text = String.Empty;
