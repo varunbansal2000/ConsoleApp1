@@ -8,9 +8,11 @@ using Application.DataAccess;
 
 namespace MVC27July.Controllers
 {
+    //[HandleError(ExceptionType = typeof(Exception), View = "Error")]
     public class EmployeeController : Controller
     {
         IDataAccess<Employee, int> dataAccess;
+        LoggerAccess loggerAccess;
 
         //public EmployeeController()
         //{
@@ -19,6 +21,7 @@ namespace MVC27July.Controllers
         public EmployeeController(IDataAccess<Employee,int> d)
         {
             dataAccess = d;
+            
         }
         // GET: Employee
         public ActionResult Index()
@@ -37,6 +40,11 @@ namespace MVC27July.Controllers
         [HttpPost]
         public ActionResult Create(Employee emp)
         {
+            if (emp.EmpNo < 0)
+            {
+                throw new Exception("DeptNo cannot be 0 or negative");
+            }
+
             dataAccess.Craete(emp);
             // Once the Save / Create is Succeful Redirect to Index Action
             return RedirectToAction("Index");
@@ -76,6 +84,34 @@ namespace MVC27July.Controllers
             return RedirectToAction("Index");
         }
 
-      
+        
+
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            loggerAccess = new LoggerAccess();
+            //base.OnException(filterContext);
+            Exception ex = filterContext.Exception;
+            filterContext.ExceptionHandled = true;
+            Logger log = new Logger();
+            log.ControllerName = filterContext.RouteData.Values["controller"].ToString();
+            log.ActionName = filterContext.RouteData.Values["action"].ToString();
+            log.ExceptionDetails = ex.Message;
+            loggerAccess.AddLog(log);
+
+            ViewResult result = this.View("Error", new HandleErrorInfo(ex, this.RouteData.Values["controller"].ToString(), this.RouteData.Values["action"].ToString()));
+            
+
+                filterContext.Result = result;
+
+        }
+
+        public ActionResult loggerDetails()
+        {
+            loggerAccess = new LoggerAccess();
+            List<Logger> l = new List<Logger>();
+            l = (List<Logger>)loggerAccess.GetLoggers();
+            return View("LoggeDetails",l);
+        }
+
     }
 }

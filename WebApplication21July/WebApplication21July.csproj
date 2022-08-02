@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Assignment26July.cs" />
+    <Compile Include="Assignments\Custom Controls\WebCustomControl1.cs" />
     <Compile Include="Assignments\CustomControl26July.aspx.cs">
       <DependentUpon>CustomControl26July.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

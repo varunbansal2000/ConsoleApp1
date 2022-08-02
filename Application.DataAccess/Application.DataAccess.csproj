@@ -44,6 +44,7 @@
     <Compile Include="DepartmentDataAccess.cs" />
     <Compile Include="EmployeeDataAccess.cs" />
     <Compile Include="IDataAccess.cs" />
+    <Compile Include="LoggerAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
